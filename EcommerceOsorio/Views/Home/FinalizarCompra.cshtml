@@ -1,0 +1,87 @@
+﻿@model IEnumerable<EcommerceOsorio.Models.ItemVenda>
+
+@{
+    ViewBag.Title = "FinalizarCompra";
+    Layout = "~/Views/Shared/Template.cshtml";
+}
+
+<h2 style="margin-bottom:30px">Finalizar Compra</h2>
+
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            Imagem
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Preço
+        </th>
+        <th>
+            Quantidade
+        </th>
+        <th>
+            Total
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="~/Images/@item.ItemVendaProduto.ProdutoImagem"
+                     style="width:50px" />
+            </td>
+            <td>
+                @item.ItemVendaProduto.ProdutoNome
+            </td>
+            <td>
+                @item.ItemVendaValor.ToString("C2")
+            </td>
+            <td>
+                <div id="container" style="text-align:center">
+                    <div id="right" style="margin:0 auto;display:inline-block">@item.ItemVendaQuantidade</div>
+                </div>
+            </td>
+            <td>
+                @{
+                    double valor = item.ItemVendaValor * item.ItemVendaQuantidade;
+                }
+                @valor.ToString("C2")
+            </td>
+
+        </tr>
+                    }
+
+</table>
+
+<div class="btn btn-outline-success">Total: @ViewBag.Total</div>
+
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            @Html.Label("Nome do Cliente:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("txtNome","", new { @class = "form-control" } )           
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Endereço do Cliente", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBox("txtEndereco", "", new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @*@Html.ActionLink("Comprar", "Comprar", "Home", new { @class = "btn btn-sucess" })*@
+                <input type="submit" value="Comprar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
