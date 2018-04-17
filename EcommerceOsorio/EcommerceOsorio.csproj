@@ -191,22 +191,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201804031140243_correcao.cs" />
-    <Compile Include="Migrations\201804031140243_correcao.Designer.cs">
-      <DependentUpon>201804031140243_correcao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804101133157_addCampoUser.cs" />
-    <Compile Include="Migrations\201804101133157_addCampoUser.Designer.cs">
-      <DependentUpon>201804101133157_addCampoUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804101134259_updateuser.cs" />
-    <Compile Include="Migrations\201804101134259_updateuser.Designer.cs">
-      <DependentUpon>201804101134259_updateuser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804101152064_atualiza.cs" />
-    <Compile Include="Migrations\201804101152064_atualiza.Designer.cs">
-      <DependentUpon>201804101152064_atualiza.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Context.cs" />
@@ -254,20 +238,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201804031140243_correcao.resx">
-      <DependentUpon>201804031140243_correcao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804101133157_addCampoUser.resx">
-      <DependentUpon>201804101133157_addCampoUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804101134259_updateuser.resx">
-      <DependentUpon>201804101134259_updateuser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804101152064_atualiza.resx">
-      <DependentUpon>201804101152064_atualiza.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

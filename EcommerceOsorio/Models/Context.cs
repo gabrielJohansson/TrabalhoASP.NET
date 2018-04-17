@@ -8,6 +8,10 @@ namespace EcommerceOsorio.Models
 {
     public class Context : DbContext
     {
+        public Context() : base("AAAA")
+    {
+        }
+
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<ItemVenda> ItensVenda { get; set; }
