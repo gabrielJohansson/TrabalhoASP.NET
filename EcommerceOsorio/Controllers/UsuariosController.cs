@@ -16,8 +16,7 @@ namespace EcommerceOsorio.Controllers
 {
     public class UsuariosController : Controller
     {
-
-
+        
         // GET: Usuarios
         public ActionResult Index()
         {
