@@ -9,14 +9,14 @@ using EcommerceOsorio.DAL;
 
 namespace EcommerceOsorio.Controllers
 {
-    [RoutePrefix("api/produtos")]
+    [RoutePrefix("api/Produtos")]
     public class ValuesController1 : ApiController
     {
-        // GET api/produtos/todos
+        // GET api/Produtos/todos
         [Route("Todos")]
         public List<Produto> Get()
         {
-            return ProdutoDAO;
+            return ProdutoDAO.ListarProdutos();
         }
 
         // GET api/<controller>/5
